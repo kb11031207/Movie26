@@ -4,7 +4,7 @@
 
 Submitted by:
 - **Leon Fong**
-- **Team Member 2 Name Here**
+- **Gyabaah K**
 - **etc**
 
 Time spent: **X** hours spent in total

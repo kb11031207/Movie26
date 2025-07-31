@@ -3,7 +3,7 @@
 # AND101 Milestone 2 - **Team/App Name**
 
 Submitted by:
-- **Team Member 1 Name Here**
+- **Leon Fong**
 - **Team Member 2 Name Here**
 - **etc**
 

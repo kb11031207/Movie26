@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">Movie26</string>
+    <string name="app_name">MoodFlix</string>
+    
+    <!-- Main Screen -->
+    <string name="title_moodflix">MoodFlix</string>
+    <string name="subtitle_how_feeling">How are you feeling today?</string>
+    
+    <!-- Moods -->
+    <string name="mood_happy">Happy</string>
+    <string name="mood_happy_desc">Comedies &amp; Feel-good</string>
+    
+    <string name="mood_sad">Sad</string>
+    <string name="mood_sad_desc">Drama &amp; Emotional</string>
+    
+    <string name="mood_excited">Excited</string>
+    <string name="mood_excited_desc">Action &amp; Adventure</string>
+    
+    <string name="mood_romantic">Romantic</string>
+    <string name="mood_romantic_desc">Love Stories</string>
+    
+    <string name="mood_scared">Scared</string>
+    <string name="mood_scared_desc">Horror &amp; Thriller</string>
+    
+    <string name="mood_thoughtful">Thoughtful</string>
+    <string name="mood_thoughtful_desc">Sci-Fi &amp; Mystery</string>
+    
+    <!-- Movie Results -->
+    <string name="movies_found">%d movies found</string>
+    <string name="rating_format">%.1f/10</string>
+    
+    <!-- Navigation -->
+    <string name="nav_moods">Moods</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_back_button">Back</string>
+    <string name="cd_movie_poster">Movie poster</string>
+    <string name="cd_mood_emoji">Mood emoji</string>
 </resources>

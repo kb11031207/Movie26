@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MovieCard">
+
+    <!-- Movie Poster -->
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="@dimen/movie_poster_width"
+        android:layout_height="@dimen/movie_poster_height"
+        android:scaleType="centerCrop"
+        android:background="@drawable/movie_poster_placeholder"
+        android:contentDescription="@string/cd_movie_poster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/movie_title"
+        style="@style/MovieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="The Grand Budapest Hotel"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movie Year -->
+    <TextView
+        android:id="@+id/movie_year"
+        style="@style/MovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="4dp"
+        android:text="2014"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+    <!-- Movie Genre -->
+    <TextView
+        android:id="@+id/movie_genre"
+        style="@style/MovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Comedy"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintTop_toBottomOf="@+id/movie_year" />
+
+    <!-- Rating Section -->
+    <LinearLayout
+        android:id="@+id/rating_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintTop_toBottomOf="@+id/movie_genre">
+
+        <!-- Star 1 -->
+        <TextView
+            android:id="@+id/star_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp" />
+
+        <!-- Star 2 -->
+        <TextView
+            android:id="@+id/star_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp" />
+
+        <!-- Star 3 -->
+        <TextView
+            android:id="@+id/star_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp" />
+
+        <!-- Star 4 -->
+        <TextView
+            android:id="@+id/star_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp" />
+
+        <!-- Star 5 -->
+        <TextView
+            android:id="@+id/star_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="12sp"
+            android:layout_marginEnd="@dimen/margin_small" />
+
+        <!-- Rating Text -->
+        <TextView
+            android:id="@+id/movie_rating"
+            style="@style/MovieRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.1/10" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_large">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/AppTitle"
+                android:text="@string/title_moodflix"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+            <TextView
+                style="@style/Subtitle"
+                android:text="@string/subtitle_how_feeling" />
+
+        </LinearLayout>
+
+        <!-- Mood Cards Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <!-- Happy Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_happy"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="😊"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_happy" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_happy_desc" />
+
+            </LinearLayout>
+
+            <!-- Sad Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_sad"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="😢"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_sad" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_sad_desc" />
+
+            </LinearLayout>
+
+            <!-- Excited Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_excited"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="🤩"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_excited" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_excited_desc" />
+
+            </LinearLayout>
+
+            <!-- Romantic Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_romantic"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="💕"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_romantic" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_romantic_desc" />
+
+            </LinearLayout>
+
+            <!-- Scared Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_scared"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="😱"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_scared" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_scared_desc" />
+
+            </LinearLayout>
+
+            <!-- Thoughtful Mood Card -->
+            <LinearLayout
+                android:id="@+id/mood_card_thoughtful"
+                style="@style/MoodCard"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:contentDescription="@string/cd_mood_emoji"
+                    android:text="🤔"
+                    android:textSize="@dimen/emoji_large" />
+
+                <TextView
+                    style="@style/MoodTitle"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/mood_thoughtful" />
+
+                <TextView
+                    style="@style/MoodDescription"
+                    android:text="@string/mood_thoughtful_desc" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView> 

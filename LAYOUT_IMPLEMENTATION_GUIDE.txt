@@ -1,0 +1,101 @@
+ MOODFLIX - LAYOUT IMPLEMENTATION GUIDE 
+
+
+This guide shows where to add functionality to the completed layouts.
+
+ MOOD SELECTION SCREEN (MoodSelectionFragment.kt)
+
+
+
+WHAT TO ADD:
+1. Click listeners for mood cards
+2. Navigation to movie results screen
+
+
+```
+
+MOOD CARD IDs:
+- R.id.mood_card_happy
+- R.id.mood_card_sad  
+- R.id.mood_card_excited
+- R.id.mood_card_romantic
+- R.id.mood_card_scared
+- R.id.mood_card_thoughtful
+
+🎬 MOVIE RESULTS SCREEN (MovieResultsFragment.kt)
+
+
+
+WHAT TO ADD:
+1. RecyclerView adapter setup
+2. Movie data loading from API
+3. Back button navigation
+
+
+
+// Update header with mood info
+view.findViewById<TextView>(R.id.mood_emoji).text = moodEmoji
+view.findViewById<TextView>(R.id.mood_title).text = moodTitle
+view.findViewById<TextView>(R.id.movies_count).text = "${moviesList.size} movies found"
+```
+
+RECYCLER VIEW ADAPTER (MovieAdapter.kt)
+=====================================
+
+
+
+WHAT TO CREATE:
+1. RecyclerView.Adapter class
+2. ViewHolder class
+3. Movie data class
+
+LAYOUT FILE TO USE: app/src/main/res/layout/item_movie.xml
+
+MOVIE CARD VIEWS TO BIND:
+- R.id.movie_poster (ImageView)
+- R.id.movie_title (TextView)
+- R.id.movie_year (TextView)
+- R.id.movie_genre (TextView)
+- R.id.star_1 through R.id.star_5 (TextViews)
+- R.id.movie_rating (TextView)
+
+
+
+
+
+massive stretch
+MAIN ACTIVITY (MainActivity.kt)
+
+
+
+
+WHAT TO ADD:
+1. Bottom navigation click handlers
+2. Fragment navigation logic
+
+DATA MODELS NEEDED
+
+
+MOVIE DATA CLASS SUGGESTION:
+```kotlin
+data class Movie(
+    val id: Int,
+    val title: String,
+    val year: Int,
+    val genre: String,
+    val rating: Float,
+    val posterUrl: String
+)
+```
+
+MOOD ENUM SUGGESTION:
+```kotlin
+enum class Mood(val emoji: String, val title: String, val description: String) {
+    HAPPY("😊", "Happy", "Comedies & Feel-good"),
+    SAD("😢", "Sad", "Drama & Emotional"),
+    EXCITED("🤩", "Excited", "Action & Adventure"),
+    ROMANTIC("💕", "Romantic", "Love Stories"),
+    SCARED("😱", "Scared", "Horror & Thriller"),
+    THOUGHTFUL("🤔", "Thoughtful", "Sci-Fi & Mystery")
+}
+```

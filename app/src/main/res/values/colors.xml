@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Colors -->
+    <color name="primary_dark">#2d1b69</color>
+    <color name="primary_light">#11998e</color>
+    <color name="accent_teal">#4ecdc4</color>
+    <color name="accent_coral">#ff6b6b</color>
+    
+    <!-- Background Colors -->
+    <color name="background_dark">#1a1a1a</color>
+    <color name="background_card">#33ffffff</color> <!-- 20% white -->
+    <color name="background_card_hover">#4dffffff</color> <!-- 30% white -->
+    <color name="background_nav">#4d000000</color> <!-- 30% black -->
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#ffffff</color>
+    <color name="text_secondary">#ccffffff</color> <!-- 80% white -->
+    <color name="text_tertiary">#99ffffff</color> <!-- 60% white -->
+    <color name="text_inactive">#66ffffff</color> <!-- 40% white -->
+    
+    <!-- Status Colors -->
+    <color name="rating_gold">#ffd700</color>
+    <color name="success">#4caf50</color>
+    <color name="warning">#ff9800</color>
+    <color name="error">#f44336</color>
+    
+    <!-- Material Design System Colors -->
+    <color name="colorPrimary">#2d1b69</color>
+    <color name="colorPrimaryDark">#1a0d3d</color>
+    <color name="colorAccent">#4ecdc4</color>
+    <color name="colorSurface">#1a1a1a</color>
+    <color name="colorOnSurface">#ffffff</color>
 </resources>

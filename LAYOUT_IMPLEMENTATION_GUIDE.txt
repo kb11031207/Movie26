@@ -85,6 +85,7 @@ data class Movie(
     val genre: String,
     val rating: Float,
     val posterUrl: String
+    x
 )
 ```
 

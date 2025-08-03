@@ -22,7 +22,7 @@ MOOD CARD IDs:
 - R.id.mood_card_scared
 - R.id.mood_card_thoughtful
 
-🎬 MOVIE RESULTS SCREEN (MovieResultsFragment.kt)
+ MOVIE RESULTS SCREEN (MovieResultsFragment.kt)
 
 
 
@@ -40,16 +40,8 @@ view.findViewById<TextView>(R.id.movies_count).text = "${moviesList.size} movies
 ```
 
 RECYCLER VIEW ADAPTER (MovieAdapter.kt)
-=====================================
 
-
-
-WHAT TO CREATE:
-1. RecyclerView.Adapter class
-2. ViewHolder class
-3. Movie data class
-
-LAYOUT FILE TO USE: app/src/main/res/layout/item_movie.xml
+LAYOUT FILE TO USE: item_movie.xml
 
 MOVIE CARD VIEWS TO BIND:
 - R.id.movie_poster (ImageView)
@@ -89,14 +81,4 @@ data class Movie(
 )
 ```
 
-MOOD ENUM SUGGESTION:
-```kotlin
-enum class Mood(val emoji: String, val title: String, val description: String) {
-    HAPPY("😊", "Happy", "Comedies & Feel-good"),
-    SAD("😢", "Sad", "Drama & Emotional"),
-    EXCITED("🤩", "Excited", "Action & Adventure"),
-    ROMANTIC("💕", "Romantic", "Love Stories"),
-    SCARED("😱", "Scared", "Horror & Thriller"),
-    THOUGHTFUL("🤔", "Thoughtful", "Sci-Fi & Mystery")
-}
-```
+

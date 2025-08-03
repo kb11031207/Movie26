@@ -5,6 +5,8 @@
 Submitted by:
 - **Leon Fong**
 - **Gyabaah K**
+- **Kesiena Berezi**
+
 - **etc**
 
 Time spent: **X** hours spent in total

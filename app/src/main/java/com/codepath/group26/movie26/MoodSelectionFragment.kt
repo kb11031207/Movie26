@@ -1,16 +1,30 @@
 package com.codepath.group26.movie26
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 
 /**
  * Fragment for mood selection screen
  * Displays the 6 mood cards for user selection
  */
 class MoodSelectionFragment : Fragment() {
+
+    // creating buttons for the moods selection
+    private lateinit var happyButton: LinearLayout
+    private lateinit var sadButton: LinearLayout
+    private lateinit var excitedButton: LinearLayout
+    private lateinit var romanticButton: LinearLayout
+    private lateinit var scaredButton: LinearLayout
+    private lateinit var thoughtfulButton: LinearLayout
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,8 +36,58 @@ class MoodSelectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
+        // Initialize the LinearLayouts from the layout
+        happyButton = view.findViewById(R.id.mood_card_happy)
+        sadButton = view.findViewById(R.id.mood_card_sad)
+        excitedButton = view.findViewById(R.id.mood_card_excited)
+        romanticButton = view.findViewById(R.id.mood_card_romantic)
+        scaredButton = view.findViewById(R.id.mood_card_scared)
+        thoughtfulButton = view.findViewById(R.id.mood_card_thoughtful)
+
+
         // TODO: Set up click listeners for mood cards
+        // Set up click listeners for mood cards
+        happyButton.setOnClickListener {
+            handleMoodSelection("Happy")
+        }
+
+        sadButton.setOnClickListener {
+            handleMoodSelection("Sad")
+        }
+
+        excitedButton.setOnClickListener {
+            handleMoodSelection("Excited")
+        }
+
+        romanticButton.setOnClickListener {
+            handleMoodSelection("Romantic")
+        }
+
+        scaredButton.setOnClickListener {
+            handleMoodSelection("Scared")
+        }
+
+        thoughtfulButton.setOnClickListener {
+            handleMoodSelection("Thoughtful")
+        }
         // TODO: Navigate to movie results when mood is selected
     }
-} 
+    private fun handleMoodSelection(mood: String) {
+        // For now, let's just show a Toast
+        Toast.makeText(requireContext(), "Selected mood: $mood", Toast.LENGTH_SHORT).show()
+
+        // TODO: Navigate to movie results when mood is selected
+        // Example using Navigation Component:
+        // val action = MoodSelectionFragmentDirections.actionMoodSelectionFragmentToMovieResultsFragment(mood)
+        // findNavController().navigate(action)
+
+        // Or, if using a custom interface to communicate with the Activity:
+        // (activity as? OnMoodSelectedListener)?.onMoodSelected(mood)
+    }
+
+// Optional: Interface for communication with Activity (if not using Navigation Component directly)
+// interface OnMoodSelectedListener {
+//     fun onMoodSelected(mood: String)
+// }
+}

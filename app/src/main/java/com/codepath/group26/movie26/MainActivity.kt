@@ -1,10 +1,12 @@
 package com.codepath.group26.movie26
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.codepath.group26.movie26.BuildConfig
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        
+        Log.d("TMDB_KEY_TEST", "API Key: ${BuildConfig.TMDB_API_KEY}")
         // Load the mood selection fragment as the default screen
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

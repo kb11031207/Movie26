@@ -3,6 +3,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+val localProperties = rootProject.file("local.properties")
+val tmdbApiKey = localProperties.readLines()
+    .find { it.startsWith("TMDB_API_KEY") }
+    ?.split("=")?.get(1)?.trim()
+
 android {
     namespace = "com.codepath.group26.movie26"
     compileSdk = 35
@@ -15,6 +20,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "TMDB_API_KEY", "\"$tmdbApiKey\"")
+    }
+
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {

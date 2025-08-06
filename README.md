@@ -15,7 +15,7 @@ Time spent: **30** hours spent in total
 
 ## Summary
 
-This app provides movie suggestions based on your mood!, **Movie26**
+This app provides movie suggestions based on your mood!, **MoodFlix**
 
 ## Milestone Requirements
 

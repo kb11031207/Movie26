@@ -62,6 +62,9 @@ dependencies {
     // Fragment Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+
+    //asyncHttpClient library
+    implementation("com.codepath.libraries:asynchttpclient:2.2.0")
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

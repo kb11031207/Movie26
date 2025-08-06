@@ -34,7 +34,21 @@ class MoodSelectionFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_mood_selection, container, false)
     }
 
+    fun getMovie(){
+        val client = AsyncHttpClient()
+        client.get(url, object : JsonHttpResponseHandler() {
+            override fun onSuccess(statusCode: Int, headers: Array<Header>, response: JSONObject) {
+                Log.d("TMDB", "Success! Response: $response")
 
+                val results = response.getJSONArray("results")
+                // You can now loop through results and extract movie data
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<Header>, throwable: Throwable, errorResponse: JSONObject?) {
+                Log.e("TMDB", "API call failed: ${throwable.message}")
+            }
+        })
+    }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

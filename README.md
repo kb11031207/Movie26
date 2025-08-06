@@ -4,7 +4,7 @@
 
 Submitted by:
 - **Leon Fong**
-- **Gyabaah K**
+- **Gyabaah Kyere**
 - **Kesiena Berezi**
 - **Himank Galundia**
 - **Jonatan Paulino**

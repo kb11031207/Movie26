@@ -11,11 +11,11 @@ Submitted by:
 
 - **etc**
 
-Time spent: **X** hours spent in total
+Time spent: **30** hours spent in total
 
 ## Summary
 
-This document provides a summary of our project building process for our app, **App Name Here**
+This app provides movie suggestions based on your mood!, **Movie26**
 
 ## Milestone Requirements
 
@@ -23,8 +23,8 @@ This document provides a summary of our project building process for our app, **
 
 The following REQUIRED features are completed:
 
-- [ ] Assign features to each member of your group
-- [ ] Establish a goal time for completing each feature
+- [X] Assign features to each member of your group
+- [X] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
@@ -47,7 +47,7 @@ Here's a video that demos all of the app's implemented features:
 
 <img src='MovieSuggestionDemo.gif' title='Video Demo' width='' alt='Video Demo' />
 
-VIDEO created with **your chosen video tool**
+VIDEO created with **ScreenToGif**
 
 ## Notes
 

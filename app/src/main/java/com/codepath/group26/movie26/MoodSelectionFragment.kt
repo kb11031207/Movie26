@@ -34,6 +34,9 @@ class MoodSelectionFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_mood_selection, container, false)
     }
 
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -72,7 +75,13 @@ class MoodSelectionFragment : Fragment() {
             handleMoodSelection("Thoughtful")
         }
         // TODO: Navigate to movie results when mood is selected
+
+
     }
+
+
+
+    //Here is what we do when one of the moods are selected
     private fun handleMoodSelection(mood: String) {
         // For now, let's just show a Toast
         Toast.makeText(requireContext(), "Selected mood: $mood", Toast.LENGTH_SHORT).show()

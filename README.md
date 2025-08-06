@@ -44,6 +44,7 @@ The following EXTRA features are implemented:
 ## 🎥 Demo Video
 
 Here's a video that demos all of the app's implemented features:
+https://youtu.be/Q9Z0BLLmeIo
 
 <img src='MovieSuggestionDemo.gif' title='Video Demo' width='' alt='Video Demo' />
 

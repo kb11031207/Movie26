@@ -1,6 +1,7 @@
 package com.codepath.group26.movie26
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -75,7 +76,23 @@ class MoodSelectionFragment : Fragment() {
     }
     private fun handleMoodSelection(mood: String) {
         // For now, let's just show a Toast
+       // Toast.makeText(requireContext(), "Selected mood: $mood", Toast.LENGTH_SHORT).show()
+        val genreMap = mapOf(
+            "Happy" to "35,10751",
+            "Sad" to "18,10749",
+            "Excited" to "28,12",
+            "Romantic" to "10749",
+            "Scared" to "27,53",
+            "Thoughtful" to "878,9648"
+        )
+
+        val genreIds = genreMap[mood] ?: "35"
         Toast.makeText(requireContext(), "Selected mood: $mood", Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(requireContext(), MovieListActivity::class.java)
+        intent.putExtra("GENRE_IDS", genreIds)
+        intent.putExtra("MOOD", mood)
+        startActivity(intent)
 
         // TODO: Navigate to movie results when mood is selected
         // Example using Navigation Component:

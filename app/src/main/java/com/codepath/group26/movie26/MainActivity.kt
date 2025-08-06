@@ -32,3 +32,16 @@ class MainActivity : AppCompatActivity() {
         // TODO: Implement bottom navigation click handlers when other fragments are created
     }
 }
+
+data class Movie(
+    val id: Int,
+    val title: String,
+    val poster_path: String?,
+    val overview: String,
+    val vote_average: Float,
+    val release_date: String
+)
+
+data class MovieResponse(
+    val results: List<Movie>
+)

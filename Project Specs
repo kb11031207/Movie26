@@ -1,0 +1,103 @@
+# **Movie26**
+
+## Table of Contents
+
+1. [App Overview](#App-Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+1. [Build Notes](#Build-Notes)
+
+## App Overview
+
+
+### Description 
+
+**Movie26 is a mood-based movie recommendation app designed to help users discover films that align with how they're feeling. Upon opening the app, users are presented with six mood options—Happy, 
+Sad, Romantic, Excited, Scared, and Thoughtful. Based on their selection, the app recommends movies with relevant genres, ratings, and thumbnails. The app is lightweight, intuitive, 
+and built for a mobile-first experience.**
+
+### App Evaluation
+
+<!-- Evaluation of your app across the following attributes -->
+
+- **Category:Entertainment / Lifestyle**
+- **Mobile:**
+- **Story:**
+- **Market:**
+- **Habit:**
+- **Scope:**
+
+## Product Spec
+
+### 1. User Features (Required and Optional)
+
+Required Features:
+
+- **Mood selection interface with 6 moods**
+- **Movie recommendation display with:
+Poster image
+Title
+Genre
+Rating (stars + number)**
+- **Smooth navigation between mood selection and recommendation screens
+Dynamic filtering of movies based on selected mood**
+
+Stretch Features:
+
+- **fill in here**
+- ...
+
+### 2. Chosen API(s)
+
+- **list first API endpoint here**
+  - **list associated required feature here**
+  - ...
+- ...
+
+### 3. User Interaction
+
+Required Feature
+
+- **User taps a mood (e.g., “Happy”)**
+  - => **App navigates to a recommendation screen with a list of comedy/feel-good movies**
+  - ...
+- **User views recommendations**
+  - => **Sees list of movie cards with poster, title, genre, and rating**
+  - ...
+
+## Wireframes
+
+<!-- Add picture of your hand sketched wireframes in this section -->
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Build Notes
+
+Built using Kotlin, RecyclerView, AsyncHttpClient, and custom adapters
+Image loading handled using Glide
+Emoticons and mood-based filtering improves accessibility and engagement
+Learned how to:
+  Dynamically load and bind data in RecyclerView
+  Handle JSON and images from a remote/local source
+  Improve UX through emotion-based design  
+
+For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+
+## License
+
+Copyright **yyyy** **your name**
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

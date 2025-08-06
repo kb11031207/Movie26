@@ -8,6 +8,12 @@ val tmdbApiKey = localProperties.readLines()
     .find { it.startsWith("TMDB_API_KEY") }
     ?.split("=")?.get(1)?.trim()
 
+val tmdbBearerToken = rootProject.file("local.properties")
+    .readLines()
+    .find { it.startsWith("TMDB_BEARER_TOKEN") }
+    ?.split("=")
+    ?.get(1)
+    ?.trim()
 android {
     namespace = "com.codepath.group26.movie26"
     compileSdk = 35
@@ -21,6 +27,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "TMDB_API_KEY", "\"$tmdbApiKey\"")
+        buildConfigField("String", "TMDB_BEARER_TOKEN", "\"$tmdbBearerToken\"")
     }
 
 

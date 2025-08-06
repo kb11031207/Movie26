@@ -2,6 +2,7 @@ package com.codepath.group26.movie26
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,12 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat
 import androidx.core.content.ContentProviderCompat.requireContext
+import com.codepath.asynchttpclient.AsyncHttpClient
+import com.codepath.asynchttpclient.RequestParams
+import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import okhttp3.Headers
+import okhttp3.internal.http2.Header
+import org.json.JSONObject
 
 /**
  * Fragment for mood selection screen
@@ -30,22 +37,39 @@ class MoodSelectionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        getMovie()
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_mood_selection, container, false)
     }
 
     fun getMovie(){
         val client = AsyncHttpClient()
+        val url = "https://api.themoviedb.org/3/movie/popular?api_key=${BuildConfig.TMDB_API_KEY}"
         client.get(url, object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Array<Header>, response: JSONObject) {
-                Log.d("TMDB", "Success! Response: $response")
-
-                val results = response.getJSONArray("results")
-                // You can now loop through results and extract movie data
+            override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) { // Corrected signature
+                Log.d("TMDB_DEBUG", "Raw JSON response: $json")
+                if (json.jsonObject != null) {
+                    val responseObject = json.jsonObject
+                    // TODO: Parse the popular movies from responseObject
+                    // Example: val results = responseObject.getJSONArray("results")
+                    Log.d("TMDB_DEBUG", "Response JSONObject: $responseObject")
+                } else {
+                    Log.w("TMDB_DEBUG", "Expected a JSONObject but got something else or null.")
+                }
             }
 
-            override fun onFailure(statusCode: Int, headers: Array<Header>, throwable: Throwable, errorResponse: JSONObject?) {
-                Log.e("TMDB", "API call failed: ${throwable.message}")
+            override fun onFailure(
+                statusCode: Int,
+                headers: Headers?, // Make headers nullable
+                response: String?, // Error response is often a String
+                throwable: Throwable? // Make throwable nullable
+            ) {
+                Log.e("TMDB_DEBUG", "Status Code: $statusCode")
+                Log.e("TMDB_DEBUG", "Headers: $headers")
+                Log.e("TMDB_DEBUG", "Response: $response")
+                if (throwable != null) {
+                    Log.e("TMDB_DEBUG", "Error: ${throwable.message}", throwable)
+                }
             }
         })
     }

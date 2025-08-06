@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         Log.d("TMDB_KEY_TEST", "API Key: ${BuildConfig.TMDB_API_KEY}")
+        Log.d("TMDB_KEY_TEST", "API Key: ${BuildConfig.TMDB_BEARER_TOKEN}")
         // Load the mood selection fragment as the default screen
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

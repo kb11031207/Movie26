@@ -15,7 +15,7 @@ title: Project_spec
 
 ---
 
-## 📱 App-Overview
+## App Overview
 
 ### Description 
 
@@ -86,7 +86,7 @@ Clean UI for mood selection and recommendations. Static/dummy data for initial l
 
 ---
 
-## 🖼️ Wireframes
+## Wireframes
 ![moodflix1](https://hackmd.io/_uploads/SysCSHldlx.png)
 ![moodflix2](https://hackmd.io/_uploads/HyNyIHldlg.png)
 
